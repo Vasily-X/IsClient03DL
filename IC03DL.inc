@@ -1,5 +1,8 @@
 /*
-
+	IsClient03DL:
+	Allow connections from 0.3.DL to SA-MP 0.3.7 server
+	
+	Adrian Graber
 */
 
 #if defined A_IC03DL_
