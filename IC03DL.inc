@@ -89,8 +89,8 @@ public OnIncomingRPC(playerid, rpcid, BitStream:bs)
 	#endif
 }
 
-/*Functions*/
-stock IsClient03DL(playerid) return IC03DL_IsClient03DL[playerid];
+/*"Functions"*/
+#define IsClient03DL(%0) IC03DL_IsClient03DL[%0]
 
 /*Hooks*/
 #if defined _ALS_OnIncomingRPC
