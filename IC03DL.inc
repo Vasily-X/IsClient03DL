@@ -15,7 +15,7 @@
 #endif
 
 /*Variables*/
-new IC03DL_IsClient03DL[MAX_PLAYERS];
+static bool:IC03DL_IsClient03DL[MAX_PLAYERS];
 	
 /*Callbacks*/
 public OnIncomingRPC(playerid, rpcid, BitStream:bs)
@@ -90,7 +90,14 @@ public OnIncomingRPC(playerid, rpcid, BitStream:bs)
 }
 
 /*Functions*/
-stock IsClient03DL(playerid) return IC03DL_IsClient03DL[playerid];
+stock IsClient03DL(playerid)
+{
+	if(0 <= playerid < MAX_PLAYERS)
+	{
+		return IC03DL_IsClient03DL[playerid];
+	}
+	return 0;
+}
 
 /*Hooks*/
 #if defined _ALS_OnIncomingRPC
